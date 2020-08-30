@@ -149,7 +149,7 @@ span {
   align-items: center;
 }
 table {
-  width: 75%;
+  width: 80%;
   margin: auto;
   font-family: "Poiret One", cursive;
   font-weight: 900;
@@ -177,5 +177,11 @@ td {
   #timer {
     width: 90vw;
     font-size: 1em;
+  }
+  #scorecard {
+    width: 90vw;
+  }
+  #table {
+    width: 90%;
   }
 }
