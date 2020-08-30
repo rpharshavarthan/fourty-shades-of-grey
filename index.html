@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourty Shades of Gray </title>
+    <link rel="icon" href="logo-27.png">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div>
+      <div id="title">
+        fourty shades of gray
+      </div>
+    </div>
+    <div id="timer">
+      <div id="time"> <span>TIME ~ </span>0:00</div>
+      <div id="btime"> <span> BEST TIME ~ </span> 0:00</div>
+    </div>
+    <div id="start-page">
+      <div id="entername">ENTER YOUR NAME</div>
+      <div class="userinfo">
+        <form class="userform" autocomplete="off" id="userForm">
+          <input type="text" name="username" id="username" required>
+          <button type="submit">START</button>
+        </form>
+      </div>
+    </div>
+    <div id="grid-box">
+      <div class="box" id="0"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="1"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="2"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="3"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="4"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="5"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="6"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="7"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="8"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="9"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="10" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="11" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="12" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="13" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="14" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="15" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="16" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="17" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="18" onclick="nextNumber(this.id)"></div>
+      <div class="box" id="19" onclick="nextNumber(this.id)"></div>
+    </div>
+    <div id="scorecard">
+      <table id="scoretable"> 
+        <tr>
+          <th>RANK</th>
+          <th>NAME</th>
+          <th>SCORE</th>
+        </tr>
+        
+      </table>
+    </div>
+    <div>
+      <button type="submit" id="playagain" onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+    <div>
+      <p id="p3">MADE WITH &#128151 BY HARSHA</p>
+    </div>
+    <audio src="Tiny Button Push.mp3" id="clicksound"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
