@@ -93,11 +93,11 @@ function playAgain() {
   document.getElementById("playagain").style.display = "none";
   document.getElementById("username").value = "";
   if (scores[0].score % 60 < 10) {
-    document.getElementById("btime").innerHTML = `BEST TIME ~ ${Math.floor(
+    document.getElementById("btime").innerHTML = `BEST ~ ${Math.floor(
       scores[0].score / 60
     )}:0${scores[0].score % 60}`;
   } else {
-    document.getElementById("btime").innerHTML = `BEST TIME ~ ${Math.floor(
+    document.getElementById("btime").innerHTML = `BEST  ~ ${Math.floor(
       scores[0].score / 60
     )}:${scores[0].score % 60}`;
   }
