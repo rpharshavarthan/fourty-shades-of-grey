@@ -6,8 +6,10 @@ window.onload = function () {
 };
 var user;
 var t;
-var minutes = 0;
-var seconds = 0;
+var sec = 0;
+var min = 0;
+var minutes;
+var seconds;
 var array1 = [];
 var array2 = [];
 var scores = [];
@@ -39,26 +41,39 @@ function runTime() {
 function stopTime() {
   console.log("yes");
   clearInterval(t);
-  document.getElementById("time").innerHTML = `<span>TIME ~ </span> 0:00`;
-  minutes = 0;
-  seconds = 0;
+  document.getElementById("time").innerHTML = `<span>TIME-</span>00:00`;
+  min = 0;
+  sec = 0;
 }
 function timer() {
-  seconds += 1;
-  if (seconds == 60) {
-    seconds = 0;
-    minutes += 1;
+  sec += 1;
+  if (sec == 60) {
+    sec = 0;
+    min += 1;
   }
-  if (seconds < 10) {
-    document.getElementById(
-      "time"
-    ).innerHTML = `<span>TIME ~ </span> ${minutes}:0${seconds}`;
-  } else {
-    document.getElementById(
-      "time"
-    ).innerHTML = `<span>TIME ~</span> ${minutes}:${seconds}`;
+  // if (seconds < 10) {
+  //   document.getElementById(
+  //     "time"
+  //   ).innerHTML = `<span>TIME-</span>${minutes}:0${seconds}`;
+  // } else {
+  //   document.getElementById(
+  //     "time"
+  //   ).innerHTML = `<span>TIME-</span> ${minutes}:${seconds}`;
+  // }
+  if(sec < 10){
+    seconds = '0' + sec;
+  }else{
+    seconds = sec;
   }
+  
+  if(min < 10){
+    minutes = '0' + min;
+  }else{
+    minutes = min;
+  }
+  document.getElementById("time").innerHTML = `<span>TIME-</span>${minutes}:${seconds}`;
 }
+
 function showNumbers() {
   document.getElementById("start-page").style.display = "none";
   document.getElementById("grid-box").style.display = "grid";
@@ -114,7 +129,7 @@ function gameOver() {
   document.getElementById("timer").style.display = "none";
   document.getElementById("scorecard").style.display = "flex";
   document.getElementById("playagain").style.display = "block";
-  scores[scores.length - 1].score = minutes * 60 + seconds;
+  scores[scores.length - 1].score = min * 60 + sec;
   scores.sort(function (a, b) {
     return b.score - a.score;
   });

@@ -1,16 +1,19 @@
 body {
   background-color: aqua;
+  background-color: black;
 }
 #title {
   font-family: "Lexend Zetta", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: black;
-  font-weight: 500;
-  font-size: 1.6em;
+  color: green;
+  font-weight: 700;
+  font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: auto;
-  margin-top: 1em;
+  margin-top: 0.15em;
   margin-bottom: 0.5em;
 }
 #grid-box {
@@ -27,8 +30,7 @@ body {
     minmax(0, 1fr);
   justify-content: center;
   align-content: center;
-  grid-gap: 0.5em;
-  /* border: 0.5px solid rgba(0, 0, 0, 0.9); */
+  grid-gap: 0.75em;
 }
 
 .box {
@@ -36,19 +38,27 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  border-radius: 3px;
-  color: white;
+  /* border-radius: 3px; */
+  color: green;
   font-family: "Poiret One", cursive;
-  font-size: 2.5em;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  border-left: 1px solid green;
+  border-top: 1px solid green;
+  box-shadow: 5px 5px 1.25px rgba(0, 128, 0, 0.5);
 }
 .box:hover {
-  color: aqua;
+  background-color: green;
+  color: black;
   cursor: pointer;
 }
-#p3 {
+#watermark {
+  margin-top: 2em;
   font-family: "Lexend Zetta", sans-serif;
-  font-size: 0.9em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
@@ -56,46 +66,61 @@ body {
 
 #start-page {
   height: 75vh;
-  width: 75vw;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 450px;
+  background-color: black;
+  border-left: 1px solid green;
+  border-top: 1px solid green;
+  box-shadow: 10px 10px 2px rgba(0, 128, 0, 0.5);
   font-family: "Poiret One", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.25em;
   margin: 1em auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* float: none; */
+  color: green;
 }
 #entername {
-  font-size: 1.3em;
+  font-size: 1em;
+  font-weight: 600;
   margin: 0.75em auto;
   text-align: center;
 }
 .userform {
   margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.userinfo {
+/* .userinfo {
   width: 50%;
-}
-.userform input,
-.userform button {
+} */
+.userform input{
   /* display: block; */
-  width: 100%;
+  width: 350px;
   box-sizing: border-box;
+  color: gray;
+}
+.userform button {
+  width: 200px;
 }
 .userform input {
+  padding-bottom: 10px;
   font-family: "Lexend Deca", sans-serif;
   font-family: "Poiret One", cursive;
-  font-size: 1.5em;
-  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   background: transparent;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid green;
   margin-bottom: 0.7em;
 }
 .userform input:focus,
@@ -103,20 +128,25 @@ body {
   outline: none;
 }
 button {
-  border-radius: 100px;
+  /* border-radius: 100px; */
+  margin-top: 1em;
   font-family: "Poiret One", cursive;
-  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
   letter-spacing: 0.2em;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
-  background-color: black;
-  padding: 0.5em;
+  background-color: green;
+  padding: 0.25em;
   border: none;
+}
+#watermark{
+  color: green;
 }
 #timer {
   display: grid;
-  width: 80vh;
-  height: 7vh;
+  width: 400px;
+  height: 35px;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   /* grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); */
   grid-gap: 0.5em;
@@ -128,13 +158,16 @@ button {
   justify-content: center;
   align-items: center;
   font-family: "Poiret One", cursive;
-  font-size: 1.1em;
-  letter-spacing: 0.2em;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Fira Code', monospace;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
   text-align: center;
-  background-color: black;
+  background-color: green;
   color: white;
-  border-radius: 100px;
+  /* border-radius: 100px; */
 }
 span {
   letter-spacing: 0.2em;
@@ -142,32 +175,48 @@ span {
 #scorecard {
   height: 75vh;
   width: 75vw;
-  background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-left: 1px solid green;
+  border-top: 1px solid green;
+  box-shadow: 12.5px 12.5px 2px rgba(0, 128, 0, 0.5);
 }
 table {
   width: 80%;
   margin: auto;
   font-family: "Poiret One", cursive;
-  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: green;
   letter-spacing: 0.2em;
 }
 table,
 th,
 td {
   text-align: left;
-  height: 2.5em;
+  height: 1.5em;
   border-bottom: 1px solid black;
-  border-collapse: collapse;
+  border-collapse: separate;
+  color: green;
+}
+td{
+  border-bottom: 1px solid green;
+}
+th, td{
+  padding-left: 6px;
+}
+th{
+  background-color: green;
+  color: black;
 }
 #playagain {
   display: block;
-  font-size: 1.3em;
-  padding: 0.2em 1em;
-  margin: 1em auto;
+  /* font-size: 1.3em; */
+  padding: 0.25em 1em;
+  margin: 1.5em auto;
 }
 @media screen and (max-width: 600px) {
   #grid-box {

@@ -14,8 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
       rel="stylesheet"
     />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   </head>
   <body>
     <div>
@@ -24,8 +31,8 @@
       </div>
     </div>
     <div id="timer">
-      <div id="time"> <span>TIME ~ </span>0:00</div>
-      <div id="btime"> <span> BEST ~ </span> 0:00</div>
+      <div id="time"> <span>TIME-</span>00:00</div>
+      <div id="btime"> <span> BEST-</span>00:00</div>
     </div>
     <div id="start-page">
       <div id="entername">ENTER YOUR NAME</div>
@@ -37,9 +44,9 @@
       </div>
     </div>
     <div id="grid-box">
-      <div class="box" id="0"  onclick="nextNumber(this.id)"></div>
-      <div class="box" id="1"  onclick="nextNumber(this.id)"></div>
-      <div class="box" id="2"  onclick="nextNumber(this.id)"></div>
+      <div class="box" id="0"  onclick="nextNumber(this.id)">0</div>
+      <div class="box" id="1"  onclick="nextNumber(this.id)">2</div>
+      <div class="box" id="2"  onclick="nextNumber(this.id)">3</div>
       <div class="box" id="3"  onclick="nextNumber(this.id)"></div>
       <div class="box" id="4"  onclick="nextNumber(this.id)"></div>
       <div class="box" id="5"  onclick="nextNumber(this.id)"></div>
@@ -59,20 +66,19 @@
       <div class="box" id="19" onclick="nextNumber(this.id)"></div>
     </div>
     <div id="scorecard">
-      <table id="scoretable"> 
+      <table id="scoretable" cellspacing="6"> 
         <tr>
           <th>RANK</th>
           <th>NAME</th>
           <th>SCORE</th>
         </tr>
-        
       </table>
     </div>
     <div>
       <button type="submit" id="playagain" onclick="playAgain()">PLAY AGAIN</button>
     </div>
     <div>
-      <p id="p3">MADE WITH &#128151 BY HARSHA</p>
+      <p id="watermark">MADE WITH &#128154; BY HARSHA</p>
     </div>
     <audio src="Tiny Button Push.mp3" id="clicksound"></audio>
     <script src="script.js"></script>
